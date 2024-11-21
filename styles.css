@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(120deg, red, blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 30%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+.flip {
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.front {
+  background-color: black;
+}
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, red, blue);
+  transform: rotateY(180deg);
+  border-radius: 10px;
+}
+img {
+  width: 5rem;
+  height: 5rem;
+}
