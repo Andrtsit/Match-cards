@@ -13,6 +13,28 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.score {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: 900;
+}
+#restart {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: 700;
 }
 .container {
   width: 30%;
