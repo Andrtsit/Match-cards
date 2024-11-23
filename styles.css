@@ -9,7 +9,7 @@ html {
 main {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(120deg, red, blue);
+  background: linear-gradient(120deg, #2e3192, #1bffff);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,7 +74,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(120deg, red, blue);
+  background: linear-gradient(120deg, #662d8c, #ed1e79);
   transform: rotateY(180deg);
   border-radius: 10px;
 }
