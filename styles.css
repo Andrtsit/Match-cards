@@ -3,62 +3,73 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 62.5%;
 }
+
 main {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background: linear-gradient(120deg, #2e3192, #1bffff);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  flex-direction: column;
+  gap:3rem;
 }
 
 .score {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top:4rem;
   font-size: 4rem;
   font-weight: 900;
 }
+
 #restart {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-bottom: 2rem;
   font-size: 2rem;
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  background-color: transparent;
+  background-color: #fff;
+  padding: 2rem;;
   font-weight: 700;
 }
+#restart:hover {
+  color:#fff;
+  background-color: #000;
+}
+
 .container {
-  width: 30%;
-  height: 50%;
+  width: 90%;
+  max-width: 600px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
   gap: 1rem;
 }
+
 .card {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: 10px;
+  perspective: 1000px;
 }
+
 .inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.6s ease-in-out;
   transform-style: preserve-3d;
   border-radius: 10px;
+  cursor: pointer;
 }
-.flip {
+
+.inner.flip {
   transform: rotateY(180deg);
 }
+
 .front,
 .back {
   position: absolute;
@@ -67,18 +78,28 @@ main {
   backface-visibility: hidden;
   border-radius: 10px;
 }
+
 .front {
   background-color: black;
 }
+
 .back {
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(120deg, #662d8c, #ed1e79);
   transform: rotateY(180deg);
-  border-radius: 10px;
 }
+
 img {
   width: 5rem;
   height: 5rem;
+}
+
+.inner.matched {
+  border: 2px solid limegreen;
+}
+
+.inner.mismatched {
+  border: 2px solid red;
 }
