@@ -7,6 +7,9 @@
 html {
   font-size: 62.5%;
 }
+body {
+  overflow: hidden;
+}
 
 main {
   width: 100%;
@@ -17,11 +20,11 @@ main {
   justify-content: center;
   position: relative;
   flex-direction: column;
-  gap:3rem;
+  gap: 3rem;
 }
 
 .score {
-  margin-top:4rem;
+  margin-top: 4rem;
   font-size: 4rem;
   font-weight: 900;
 }
@@ -33,11 +36,11 @@ main {
   border: none;
   cursor: pointer;
   background-color: #fff;
-  padding: 2rem;;
+  padding: 2rem;
   font-weight: 700;
 }
 #restart:hover {
-  color:#fff;
+  color: #fff;
   background-color: #000;
 }
 
